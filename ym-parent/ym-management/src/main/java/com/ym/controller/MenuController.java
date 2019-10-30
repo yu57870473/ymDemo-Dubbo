@@ -17,8 +17,6 @@ public class MenuController {
     @RequestMapping("/")
     public List<Menu> show(){
         List<Menu> show = menuService.show();
-        System.out.println(show);
-        System.out.println("haha");
         return show;
     }
 }
