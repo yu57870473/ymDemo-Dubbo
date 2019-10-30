@@ -1,7 +1,7 @@
 package com.ym.controller;
 
-import com.ym.entity.Menu;
-import com.ym.service.impl.MenuServiceImpl;
+import com.ym.entity.User;
+import com.ym.service.impl.UserServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,13 +11,13 @@ import java.util.List;
 
 @Controller
 @ResponseBody
-@RequestMapping("/menu")
-public class MenuController {
+@RequestMapping("/user")
+public class UserController {
     @Resource
-    private MenuServiceImpl menuService;
+    private UserServiceImpl userService;
     @RequestMapping("/show")
-    public List<Menu> show(){
-        List<Menu> show = menuService.show();
+    public List<User> show(){
+        List<User> show = userService.show();
         return show;
     }
 }
