@@ -1,12 +1,14 @@
 package com.ym.dubbo.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.ym.mapper.MenuMapper;
 import com.ym.dubbo.service.MenuDubboService;
 import com.ym.entity.Menu;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+@Service
+@org.springframework.stereotype.Service
 public class MenuDubboServiceImpl implements MenuDubboService {
     @Resource
     private MenuMapper menuMapper;

@@ -13,11 +13,7 @@
     
     <dubbo:protocol name="dubbo" port="28888"/>
 
-    <dubbo:service interface="com.ym.dubbo.service.MenuDubboService" ref="menuDubboServiceImpl"/>
-    <dubbo:service interface="com.ym.dubbo.service.UserDubboService" ref="userDubboServiceImpl"/>
-
-    <bean id="menuDubboServiceImpl" class="com.ym.dubbo.service.impl.MenuDubboServiceImpl"/>
-    <bean id="userDubboServiceImpl" class="com.ym.dubbo.service.impl.UserDubboServiceImpl"/>
+    <dubbo:annotation package="com.ym.dubbo.service.impl"/>
 
 
     <import resource="../../spring-core.xml"/>
