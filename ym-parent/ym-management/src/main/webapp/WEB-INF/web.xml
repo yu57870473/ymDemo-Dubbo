@@ -36,7 +36,7 @@
 
   <!--由tomcat实例化springMVC拦截器   load-on-startup为1时启动即实例化  否则请求时候才进行实例化-->
   <servlet>
-    <servlet-name>Spring</servlet-name>
+    <servlet-name>SpringMVC</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
@@ -45,7 +45,7 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Spring</servlet-name>
+    <servlet-name>SpringMVC</servlet-name>
     <!--为/而不是/*-->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
