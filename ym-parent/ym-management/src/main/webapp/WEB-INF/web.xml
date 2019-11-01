@@ -15,24 +15,6 @@
     <param-value>classpath:spring-*.xml</param-value>
   </context-param>
 
-  <!-- log4j2-begin -->
-  <!--<listener>
-    <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
-  </listener>
-
-  <filter>
-    <filter-name>log4jServletFilter</filter-name>
-    <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>log4jServletFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-    <dispatcher>REQUEST</dispatcher>
-    <dispatcher>FORWARD</dispatcher>
-    <dispatcher>INCLUDE</dispatcher>
-    <dispatcher>ERROR</dispatcher>
-  </filter-mapping>-->
-  <!-- log4j2-end -->
 
   <!--由tomcat实例化springMVC拦截器   load-on-startup为1时启动即实例化  否则请求时候才进行实例化-->
   <servlet>
@@ -81,14 +63,4 @@
     <filter-name>shiroFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>-->
-
-
-  <mime-mapping>
-    <extension>ico</extension>
-    <mime-type>image/x-icon</mime-type>
-  </mime-mapping>
-
-  <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
-  </welcome-file-list>
 </web-app>

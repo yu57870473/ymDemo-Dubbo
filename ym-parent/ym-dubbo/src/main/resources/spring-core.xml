@@ -69,5 +69,4 @@
         <aop:pointcut id="MyPoint" expression="execution(* com.ym.*.*(..))"/>
         <aop:advisor advice-ref="MyAdvice" pointcut-ref="MyPoint"/>
     </aop:config>
-
 </beans>

@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.ym.mapper.MenuMapper;
 import com.ym.dubbo.service.MenuDubboService;
 import com.ym.entity.Menu;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;

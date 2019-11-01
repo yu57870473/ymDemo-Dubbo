@@ -6,16 +6,15 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://code.alibabatech.com/schema/dubbo
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--设置该服务提供者名称,便于服务治理-->
     <dubbo:application name="ymDubbo-service"/>
-
-    
+    <!--配置注册中心地址,可以是单节点也可以是集群,集群节点用逗号隔开-->
     <dubbo:registry address="192.168.238.129:2181,192.168.238.131:2181,192.168.238.132:2181" protocol="zookeeper"/>
-    
+    <!--Consumer与Provider之间通信采用的通信协议dubbo协议与Provider通信的端口-->
     <dubbo:protocol name="dubbo" port="28888"/>
-
+    <!--根据com.alibaba.dubbo.config.annotation.Service注解扫描接口实现类-->
     <dubbo:annotation package="com.ym.dubbo.service.impl"/>
-
-
+    <!--引入spring的核心配置与此配置文件一同被com.alibaba.dubbo.container.Main.main(args);加载-->
     <import resource="../../spring-core.xml"/>
 
 </beans>
